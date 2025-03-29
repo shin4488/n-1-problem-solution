@@ -26,4 +26,7 @@ Things you may want to cover:
 # note
 docker compose build
 docker compose run app rails new . --force --database=postgresql --skip-javascript
-docker compose build
+docker compose up -d app
+docker compose exec app rails db:create
+docker compose exec app rails db:migrate
+docker compose exec app rails console
