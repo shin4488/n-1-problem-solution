@@ -7,8 +7,8 @@ class CompareLoadMethods
       ActiveRecord::Base.logger = Logger.new($stdout)
       measure(:player_preload) { Player.get_players_by_preload }
       measure(:player_eager_load) { Player.get_players_by_eagerload }
-      measure(:team_preload) { MlbTeam.get_players_by_preload }
-      measure(:team_eager_load) { MlbTeam.get_players_by_eagerload }
+      measure(:team_preload) { MlbTeam.get_teams_by_preload }
+      measure(:team_eager_load) { MlbTeam.get_teams_by_eagerload }
     end
 
     private

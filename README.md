@@ -48,6 +48,6 @@ The script sets up data using `DevDataStore`. For the small dataset, it
 creates a handful of sample teams and players. For the large dataset it
 generates **10,000 teams with 10,000 players each**, so be prepared for a long
 runtime. Querying logic is provided by `Player.get_players_by_preload`,
-`Player.get_players_by_eagerload`, `MlbTeam.get_players_by_preload`, and
-`MlbTeam.get_players_by_eagerload`.
+`Player.get_players_by_eagerload`, `MlbTeam.get_teams_by_preload`, and
+`MlbTeam.get_teams_by_eagerload`.
 
