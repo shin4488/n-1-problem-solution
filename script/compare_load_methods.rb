@@ -1,4 +1,4 @@
-require 'benchmark'
+require "benchmark"
 
 class CompareLoadMethods
   class << self
@@ -31,5 +31,5 @@ class CompareLoadMethods
   end
 end
 
-size = (ARGV[0] || 'small').to_sym
+size = (ARGV[0] || "small").to_sym
 CompareLoadMethods.run(size)
