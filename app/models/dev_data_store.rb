@@ -45,5 +45,14 @@ class DevDataStore
         end
       end
     end
+
+    def create_large!
+      10_000.times do |i|
+        team = MlbTeam.create!(name: "Team#{i}")
+        10_000.times do |j|
+          team.players.create!(name: "Player#{i}_#{j}", is_injured: false)
+        end
+      end
+    end
   end
 end
