@@ -47,7 +47,7 @@ bin/rails runner script/compare_load_methods.rb large
 The script sets up data using `DevDataStore`. For the small dataset, it
 creates a handful of sample teams and players. For the large dataset it
 generates **10,000 teams with 10,000 players each**, so be prepared for a long
-runtime. Querying logic is provided by `Player.with_team_preload`,
-`Player.with_team_eager_load`, `MlbTeam.with_players_preload`, and
-\`MlbTeam.with_players_eager_load\`.
+runtime. Querying logic is provided by `Player.get_players_by_preload`,
+`Player.get_players_by_eagerload`, `MlbTeam.get_players_by_preload`, and
+`MlbTeam.get_players_by_eagerload`.
 

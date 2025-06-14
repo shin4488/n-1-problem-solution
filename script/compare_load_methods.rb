@@ -5,10 +5,10 @@ class CompareLoadMethods
     def run(size)
       prepare_data(size)
       ActiveRecord::Base.logger = Logger.new($stdout)
-      measure(:player_preload) { Player.with_team_preload }
-      measure(:player_eager_load) { Player.with_team_eager_load }
-      measure(:team_preload) { MlbTeam.with_players_preload }
-      measure(:team_eager_load) { MlbTeam.with_players_eager_load }
+      measure(:player_preload) { Player.get_players_by_preload }
+      measure(:player_eager_load) { Player.get_players_by_eagerload }
+      measure(:team_preload) { MlbTeam.get_players_by_preload }
+      measure(:team_eager_load) { MlbTeam.get_players_by_eagerload }
     end
 
     private

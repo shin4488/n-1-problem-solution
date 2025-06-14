@@ -3,12 +3,12 @@ class Player < ApplicationRecord
 
   class << self
     # Preload associated teams and iterate over them to access the team name.
-    def with_team_preload
+    def get_players_by_preload
       preload(:mlb_team).each { |player| player.mlb_team.name }
     end
 
     # Eager load associated teams and iterate over them to access the team name.
-    def with_team_eager_load
+    def get_players_by_eagerload
       eager_load(:mlb_team).each { |player| player.mlb_team.name }
     end
   end
