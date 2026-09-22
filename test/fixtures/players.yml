@@ -1,11 +1,16 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  mlb_team: one
-  name: MyString
+north_alex:
+  mlb_team: north
+  name: Alex
   is_injured: false
 
-two:
-  mlb_team: two
-  name: MyString
+south_alex:
+  mlb_team: south
+  name: Alex
+  is_injured: true
+
+north_blair:
+  mlb_team: north
+  name: Blair
   is_injured: false
