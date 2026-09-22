@@ -51,3 +51,13 @@ runtime. Querying logic is provided by `Player.get_players_by_preload`,
 `Player.get_players_by_eagerload`, `MlbTeam.get_teams_by_preload`, and
 `MlbTeam.get_teams_by_eagerload`.
 
+## Tests
+
+Run `RAILS_ENV=test bin/rails db:prepare`, then `bin/rails test:all` to run
+all tests, including system tests. Use a dedicated PostgreSQL test database.
+
+The query examples must return all players with their correct teams and injury
+status, and all teams including teams without players. Empty datasets return no
+records. Both loading strategies must avoid database reads growing with the
+number of teams or players. Tests compare results and query growth without
+requiring particular SQL strings, joins, or a fixed total query count.
