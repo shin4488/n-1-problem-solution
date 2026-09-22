@@ -1,7 +1,10 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
+north:
+  name: North
 
-two:
-  name: MyString
+south:
+  name: South
+
+empty:
+  name: Empty
